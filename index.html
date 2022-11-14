@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple To Do List</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <main class="container">
+        <h1>TODO List</h1>
+        <ul id="tasks-list"></ul>
+
+        <form id="form__new-task">
+          <button id="push" type="submit"></button>
+
+          <input
+            id="input__new-task"
+            type="text"
+            aria-label="Add a new task"
+            placeholder="Task to be done.."
+          />
+        </form>
+        <audio class="audio" src="media/likovanie-28.mp3"></audio>
+      </main>
+    </div>
+  </body>
+</html>

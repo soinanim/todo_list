@@ -1,0 +1,134 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --index: calc(1vw + 1vh);
+  --background-color: #fff7e4;
+  --h-color: #343434;
+  --text-color: #1a1a1a;
+  --text-color__second: #8b8b8b;
+  --border-color: #ddd6c5;
+}
+
+@font-face {
+  font-family: ObjectSans_c;
+  src: url('../fonts/ObjectSans-Slanted.woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: ObjectSans_c;
+  src: url('../fonts/ObjectSans-Regular.woff2');
+  font-weight: 400;
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: ObjectSans_c, sans;
+  line-height: 1.55;
+}
+
+h1 {
+  font-family: ObjectSans_c, sans;
+  font-size: calc(var(--index) * 2);
+  font-weight: 400;
+  color: var(--h-color);
+  margin-top: calc(var(--index) * 2);
+  margin-bottom: calc(var(--index) * 1);
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: calc(var(--index) * 25);
+}
+
+#form__new-task {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#form__new-task input {
+  width: 100%;
+  padding: calc(var(--index) / 1.5);
+  border: 0;
+  background: none;
+  font-size: calc(var(--index) * 0.75);
+  font-weight: 400;
+  font-family: ObjectSans_c, sans;
+  color: var(--text-color);
+}
+
+#form__new-task input:focus {
+  outline: none;
+}
+
+#form__new-task button {
+  width: calc(var(--index) * 1.2);
+  height: calc(var(--index) * 1);
+  border: none;
+  background: center / contain var(--background-color) no-repeat
+    url('../icons/plus.svg');
+  cursor: pointer;
+  outline: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  height: calc(var(--index) * 2.15);
+  border-bottom: 1px solid var(--border-color);
+  font-size: calc(var(--index) / 1.4);
+  list-style-type: none;
+  cursor: pointer;
+}
+
+li input {
+  margin-right: calc(var(--index) / 1.5);
+}
+
+li button {
+  margin-left: auto;
+  width: calc(var(--index) / 1.2);
+  height: calc(var(--index) / 1.2);
+  background: center / contain no-repeat url('../icons/trash-2.svg');
+  border: none;
+  cursor: pointer;
+}
+
+input.checkbox-task {
+  appearance: none;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  height: calc(var(--index) * 1);
+  width: calc(var(--index) * 1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type='checkbox']:checked {
+  border: 1px solid #577560;
+  background-color: #577560;
+}
+
+input.checkbox-task:checked:before {
+  content: '✔';
+  color: #fff;
+  font-weight: bold;
+}
+
+li.done {
+  color: var(--text-color__second);
+}
